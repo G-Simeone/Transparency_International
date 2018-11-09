@@ -8,7 +8,7 @@ import pandas as pd
 import docx 
 from docx.shared import Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from param import *
+from constants import *
 
 
 def add_hyperlink(paragraph, url, text):

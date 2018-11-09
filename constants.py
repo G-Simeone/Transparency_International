@@ -1,4 +1,22 @@
-# CONSTANTS 
+#############################
+###  CONSTANT PARAMETERS  ###
+### To set here like in a ###
+###     config file       ###      
+#############################
+
+# Scope is the general url of Google Spreadsheet
+SCOPE = "https://spreadsheets.google.com/feeds"
+
+# KEY is the name of the json file that you created to have access to the Google API 
+# See: https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/
+KEY = "Jupyter_meets_GSheet-a279ad757691.json"
+
+# This is the ID of your google spreadsheet, it is contained in its URL, in our case, see:
+# https://docs.google.com/spreadsheets/d/WHAT IS HERE/edit#gid=0
+SPREADSHEET_ID = "1ANV9TXjL75vUaxxuBCvMqYgc7fgg3uruUy_BdKKyr30"
+
+# The name of the tab you want to export. 
+WORKSHEET = "Full_DB"
 
 # Add all names as key and a list of the questions they contain as list 
 SECTIONS_DICT = {

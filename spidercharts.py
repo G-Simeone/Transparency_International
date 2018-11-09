@@ -7,7 +7,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from math import pi
-from param import *
+from constants import *
 from utils import *
 
 
@@ -54,7 +54,8 @@ def create_and_store_df_for_spidercharts(sections_df, sectors_df, sub_folders_na
         # Reset index and rename the previous index column to "groups".
         my_df = df_3.reset_index().rename(index = int, columns = {"index": "groups"})
 
-        # Rename the columns using the Italian names of the sections shortened (see constant SECTIONS_SHORT_NAMES in param.py). 
+        # Rename the columns using the Italian names of the sections shortened (see constant SECTIONS_SHORT_NAMES in 
+        # constants.py). 
         # Rename row containing sector English name and "Averages" to Italian. 
         my_df.rename(new_cols_dict, axis = 'columns', inplace = True)
         my_df.at[1,"groups"] = "Medie Settore ({})".format(my_df.at[1,"groups"])

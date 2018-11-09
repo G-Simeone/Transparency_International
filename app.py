@@ -3,7 +3,7 @@
 ######################################################################                
 
 '''
-Variable definition and logic is as follows (also applicable to utils.py, spidercharts.py, param.py and company_profiles.py)
+Variable definition and logic is as follows (also applicable to utils.py, spidercharts.py, constants.py and company_profiles.py)
 
 In the methodology of Transparency International (TI), the Trasparency in Corporate Reporting Index (TRAC Index) is the average of the results of the 10 sections a company has been assessed on. Each section has a different number of questions, and the section result is the weighted average of the questions scores obtained. Each question can be graded on a scale of either 0-1, 0-1-2, or 0-1-2-3, depending on the weight that TI attributes to that particular question in the section.
 
@@ -40,7 +40,7 @@ from docx.shared import Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from utils import *
 from spidercharts import *
-from param import *
+from constants import *
 from company_profiles import *
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -51,11 +51,11 @@ from math import pi
 ########################
 
 # Get the raw data from Google Spreadsheet and create a back up (copy_df) of the df and one we'll work with (raw_df).
-copy_df = access_google_spreadsheet(
-    scope = "https://spreadsheets.google.com/feeds", 
-    json_keyfile_name = "Jupyter_meets_GSheet-a279ad757691.json", # This file has to be in the same folder
-    spreadsheet_key = "1ANV9TXjL75vUaxxuBCvMqYgc7fgg3uruUy_BdKKyr30", # You get this from the link of the GSheet
-    worksheet = "Full_DB") # Tab you want to import 
+copy_df, credentials = access_google_spreadsheet(
+    scope = SCOPE, 
+    json_keyfile_name = KEY, # This file has to be in the same folder
+    spreadsheet = SPREADSHEET_ID, # You get this from the link of the GSheet
+    worksheet = WORKSHEET) # Tab you want to import 
     
 raw_df = copy_df
 raw_df = raw_df.set_index("Company_Name")
@@ -81,7 +81,7 @@ sections_results_df = create_sections_df(cols_ls = sections_cols_ls, index = sco
 
 # Pupulate the sections_results_df by calculating the average per company per section.
 # Calculate the average of the sections averages, what Transparency International calls the "TRAC_Index".
-# Note that the variables SECTIONS_LS, QUESTION_LS and MAX_RESULTS_LS are constant in param.py. 
+# Note that the variables SECTIONS_LS, QUESTION_LS and MAX_RESULTS_LS are constant in constants.py. 
 sections_results_df = populate_sections_df(company_list = scores_only_df.index, 
                                            num_of_sections = len(SECTIONS_LS),
                                            scores_df = scores_only_df, 
@@ -89,7 +89,7 @@ sections_results_df = populate_sections_df(company_list = scores_only_df.index,
                                            questions_ls = QUESTIONS_LS, 
                                            max_results_ls = MAX_RESULTS_LS)
 
-# Based on the "TRAC_Index" result, assign a band (unsatisfactory, satisfactory, good, excellent) see BANDS_DICT in param.py
+# Based on the "TRAC_Index" result, assign a band (unsatisfactory, satisfactory, good, excellent) see BANDS_DICT in constants.py
 sections_results_df = assign_bands(sections_df = sections_results_df, bands_dict = BANDS_DICT)
 
 # Add columns on sector by merging initial copy DataFrame with the section scores DataFrame on Company Name and reset index. 
@@ -115,7 +115,7 @@ sectors_results_df_transposed = sectors_results_df.transpose()
 ####################
 
 # Let's create the folder structure on our machine where we will store the results of the analysis. 
-# Note that the variable ROOT and SUB_FOLDERS_LS are constant in param.py.
+# Note that the variable ROOT and SUB_FOLDERS_LS are constant in constants.py.
 # We want to pass as list of companies only the names of the companies, remember we addes the "Average" row in
 # the sections_results_df, exclude this with -1 in the slicing.
 create_folders_structure(root = ROOT, sub_folders_names = SUB_FOLDERS_LS, companies_ls = sections_results_df.index[:-1])
@@ -126,16 +126,19 @@ sections_results_df = sections_results_df.where(sections_results_df.notnull(), N
 sectors_results_df_transposed = sectors_results_df_transposed.where(sectors_results_df_transposed.notnull(), None)
 
 # Assign a name to every df and store them in a dictionary. 
-all_dataframes_dict = {'scores_data' : scores_only_df,
-                       'sections_results_data': sections_results_df,
-                       'sectors_scores_data' : sectors_results_df_transposed,
+all_dataframes_dict = {'scores_data_final' : scores_only_df,
+                       'sections_results_data_final': sections_results_df,
+                       'sectors_results_data_final' : sectors_results_df_transposed,
                        'raw_data': raw_df}
 
+# Store the all dataframes as csv in the corresponding folders. sub_folder_ls[0] is "data", see constants.py
+# Push DataFrames to Google Spreadsheet as new tabs
 
-# Store the all dataframes as csv in the corresponding folders. sub_folder_ls[0] is "data", see params.py
 for key, value in all_dataframes_dict.items():
     store_file(root = ROOT, file = value, file_name = key, destination_path = SUB_FOLDERS_LS[0])
-
+    if key is not 'raw_data':
+        d2g.upload(value, SPREADSHEET_ID, key, credentials=credentials, row_names=True)
+        
 # Create customised company profiles and store them at the PATH: /deliverables/company_profile/{company_name}
 create_save_company_profiles(df_raw_data = raw_df, 
                              df_sections = sections_results_df, 
@@ -152,10 +155,10 @@ create_save_company_profiles(df_raw_data = raw_df,
 # Create dataframes for the spidercharts and store them in a dictionary, store also every df in the folder
 # of the company at the PATH: /deliverables/company_profile/{company_name}
 spider_charts_dfs_dict = create_and_store_df_for_spidercharts(root = ROOT, 
-                                                              sections_df = sections_results_df, 
-                                                              sectors_df = sectors_results_df_transposed, 
-                                                              sub_folders_names = SUB_FOLDERS_LS, 
-                                                              new_cols_dict = SECTIONS_SHORT_NAMES)
+                                                             sections_df = sections_results_df, 
+                                                             sectors_df = sectors_results_df_transposed, 
+                                                             sub_folders_names = SUB_FOLDERS_LS, 
+                                                             new_cols_dict = SECTIONS_SHORT_NAMES)
 
 # Make 3 spiderchart for every company and store them in the company folder.
 make_and_save_spidercharts(df_for_spidercharts_dict = spider_charts_dfs_dict, 

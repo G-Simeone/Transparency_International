@@ -12,19 +12,19 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import numpy as np
 import pathlib
-from param import *
+from constants import *
 
-def access_google_spreadsheet (scope = "URL", json_keyfile_name = "Name of your .json file", spreadsheet_key = "https://docs.google.com/spreadsheets/d/{WHAT IS HERE}/edit#gid=0", worksheet = "Name of the tab"):
+def access_google_spreadsheet (scope, json_keyfile_name, spreadsheet, worksheet):
     
     '''
     Function that accesses Google Spreadsheet tab. 
     
     credits: www.countingcalculi.com/explanations/google_sheets_and_jupyter_notebooks/
-    params: scope (string type of an URL).
-            json_key_file_name (name of the json file saved in the same folder as utils.py).
-            speadsheet_key (key of the spreadsheet to identify it).
-            worksheet (tab of the spreadsheet).
-    return: orig_df (dataframe where the data has been loaded). 
+    params: scope (string, of the general Google Spreadsheet URL).
+            json_key_file_name (string, name of the json file saved in the same folder as utils.py).
+            speadsheet (string, id of the spreadsheet).
+            worksheet (string, name of tab of the spreadsheet).
+    return: orig_df (dataframe, where the data has been loaded). 
     '''
     
     # Create credentials.
@@ -34,7 +34,7 @@ def access_google_spreadsheet (scope = "URL", json_keyfile_name = "Name of your 
     google_client = gspread.authorize(credentials)
     
     # Use google_client to open the Google Spreadsheet using spreadsheet_key. 
-    book = google_client.open_by_key(spreadsheet_key)
+    book = google_client.open_by_key(spreadsheet)
 
     # Choose tab to extract data from.
     worksheet = book.worksheet(worksheet) 
@@ -45,7 +45,7 @@ def access_google_spreadsheet (scope = "URL", json_keyfile_name = "Name of your 
     # Create orig_df. 
     orig_df = pd.DataFrame(table[1:], columns=table[0]).fillna(value=np.nan)
 
-    return (orig_df)
+    return (orig_df, credentials)
 
 
 def columns_to_keep (column, sections):
@@ -61,7 +61,7 @@ def columns_to_keep (column, sections):
     
     In app.py we will be extracting all "Score_NumSection_NumQuestion" columns. 
     
-    params: column_str (string type, user chooses from Score, Source, Comment, URL).
+    params: column_str (string, user chooses from Score, Source, Comment, URL).
     return: columns_to_keep_ls (list of strings, represeting the columns to slice raw_df).
     '''
     
@@ -69,7 +69,7 @@ def columns_to_keep (column, sections):
     columns_to_keep_ls = []
     
     # Extract from a dictionary type the section (key) and the list of question numbers (value). This dictionary is created in
-    # param.py as a constant and this whole ETL pipeline changes based on that dictionary elements. 
+    # constants.py as a constant and this whole ETL pipeline changes based on that dictionary elements. 
     for key, value in sections.items():
         for question in range(len(value)):
             columns_to_keep_ls.append("{}_{}_{}".format(column, key, value[question]))
@@ -81,9 +81,9 @@ def create_sections_df (index, cols_ls):
     
     '''
     Function that creates a df for the sections results.
-    params: cols_ls (list of strings type, names of columns for the df).
+    params: cols_ls (list of strings, names of columns for the df).
             index (index object, passed from the index of another df we want to be indexed the same)
-    return: pd.DataFrame (df, filled with NaN, indexed on index and with columns cols_ls).
+    return: pd.DataFrame (dataframe, filled with NaN, indexed on index and with columns cols_ls).
     ''' 
     
     return (pd.DataFrame(data=np.NaN, index = index, columns = cols_ls))
@@ -126,7 +126,7 @@ def populate_sections_df(company_list, num_of_sections, scores_df, sections_df, 
             num_of_sections (int, represents the total number of sections in the analysis).
             scores_df (dataframe, containing all scores columns, indexed on "Company_Name").
             sections_df (dataframe, should be passed with NaN, indexed on "Company_Name").
-            questions_ls
+            questions_ls (list of lists of ints, every list contains the numbers of the questions in the section).
     return: sections_df (dataframe, populated with the sections averages. In the "Company_Name" columns there should also be 
                          a new row called "Averages", and after the last section "Section_10" there should be a new column 
                          called "TRAC_Index", it is indexed on "Company_Name").
@@ -190,8 +190,8 @@ def create_folders_structure (root, sub_folders_names, companies_ls):
     '''
     Function that creates folders structures to store the outputs of app.py.
     
-    params: root (string type, name of the root folder).
-            sub_folders_names (string type, name of the sub folder).
+    params: root (string, name of the root folder).
+            sub_folders_names (string, name of the sub folder).
             companies_ls (list of strings, containing all names of all companies to create one folder each).
     return: None 
     '''
