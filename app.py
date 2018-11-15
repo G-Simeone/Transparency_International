@@ -121,17 +121,17 @@ sections_results_df = sections_results_df.where(sections_results_df.notnull(), N
 sectors_results_df_transposed = sectors_results_df_transposed.where(sectors_results_df_transposed.notnull(), None)
 
 # Assign a name to every df and store them in a dictionary. 
-all_dataframes_dict = {'scores_data_final' : scores_only_df,
-                       'sections_results_data_final': sections_results_df,
-                       'sectors_results_data_final' : sectors_results_df_transposed,
-                       'raw_data_final': raw_df}
+all_dataframes_dict = {'scores_data_test' : scores_only_df,
+                       'sections_results_data_test': sections_results_df,
+                       'sectors_results_data_test' : sectors_results_df_transposed,
+                       'raw_data_test': raw_df}
 
 # Store the all dataframes as csv in the corresponding folders. sub_folder_ls[0] is "data", see constants.py
 # Push DataFrames to Google Spreadsheet as new tabs
 
 for key, value in all_dataframes_dict.items():
     store_file(root = ROOT, file = value, file_name = key, destination_path = SUB_FOLDERS_LS[0])
-    if key is not 'raw_data_final':
+    if key is not 'raw_data_test':
         d2g.upload(value, SPREADSHEET_ID, key, credentials=credentials, row_names=True)
         
 # Create customised company profiles and store them at the PATH: /deliverables/company_profile/{company_name}

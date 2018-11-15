@@ -20,7 +20,9 @@ def create_and_store_df_for_spidercharts(sections_df, sectors_df, sub_folders_na
     params: sections_df (dataframe, containing all results per section, indexed on "Company_Name").
             sectors_df (dataframe, containing all results per section grouped by sector, indexed on "Company_Name").
             sub_folders_names (list of strings, contains the names of the sub folders).
-    return: None. 
+            new_cols_dict ()
+            root ()
+    return: df_for_spidercharts_dict. 
     '''
     
     # Empty dictionary. 
@@ -63,14 +65,22 @@ def create_and_store_df_for_spidercharts(sections_df, sectors_df, sub_folders_na
 
         # Add N/A to the new section name if the section result is None and replace None with 0.01 (we still need an int here
         # for the spiderchart to create a star-like effect connecting the dots of every section restult with a line).
+
         for i in my_df.columns[1:]:
             if my_df.at[0, i] == None:
                 new_name = i + '\n' + "(N/A)"
                 my_df.rename({i : new_name}, axis = 'columns', inplace = True)
-                my_df.at[0, new_name] = 0.01 
+                my_df.at[0, new_name] = 0.01
                 
+        # Handles the edge case of those sectors where all companies have None at a section and this results in the 
+        # average of for that section for that sector to be another None. Replace with 0.01 for visualisation purposes. 
+        for i in my_df.columns[1:]:
+            if my_df.at[1, i] == None:
+                my_df.at[1, i] = 0.01
+        
+        # Store my_df in dictionary 
         df_for_spidercharts_dict[company] = my_df
-    
+
     # Save the df in the folder of the compay. 
     for key, value in df_for_spidercharts_dict.items():
         destination_path = sub_folders_names[1] + "/" + key 
