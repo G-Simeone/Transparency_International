@@ -140,18 +140,18 @@ def populate_sections_df(company_list, num_of_sections, scores_df, sections_df, 
             
              # Populate the sections_df with the results of the calculate_section_results function.
             sections_df.at[company,'Section_{}'.format(section_num)]\
-            = round((calculate_section_result(scores_df, questions_ls,\
-                                              max_results_ls, company_name = company, section = section_num)), 2)
+            = (calculate_section_result(scores_df, questions_ls,\
+                                              max_results_ls, company_name = company, section = section_num))
             
             # Populate the average line with the average of every section
             sections_df.at["Averages", "Section_{}".format(section_num)] \
-            = round(sections_df["Section_{}".format(section_num)].mean(), 2)
+            = sections_df["Section_{}".format(section_num)].mean()
             
         #Calculate the average of every company and store it the "TRAC_Index" column
-        sections_df.at[company, "TRAC_Index"] = round(sections_df.loc[company].mean(), 2)
+        sections_df.at[company, "TRAC_Index"] = sections_df.loc[company].mean()
         
     # Add the average of the "TRAC_Index"column.   
-    sections_df.at["Averages", "TRAC_Index"] = round(sections_df["TRAC_Index"].mean(), 2)
+    sections_df.at["Averages", "TRAC_Index"] = sections_df["TRAC_Index"].mean()
     
     return (sections_df)
 

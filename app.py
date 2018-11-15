@@ -28,16 +28,12 @@ The objective of this pipeline is to:
    .png. 
 '''
 
-
 # Imports 
 
 import pandas as pd
 import numpy as np
 from df2gspread import df2gspread as d2g
-import inspect as inspect 
-import docx
-from docx.shared import Inches
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx import *
 from utils import *
 from spidercharts import *
 from constants import *
@@ -104,9 +100,8 @@ sections_results_df = sections_results_df.set_index("Company_Name")
 sectors_results_df = pd.DataFrame()
 
 for section in list(range(1, 11)):  
-    sectors_results_df = sectors_results_df.append(round
-                                                   (sections_results_df.groupby("Company_Sector")["Section_{}".format(section)]
-                                                    .mean(), 2))
+    sectors_results_df = sectors_results_df.append(sections_results_df.groupby("Company_Sector")["Section_{}".format(section)]
+                                                    .mean())
 
 sectors_results_df_transposed = sectors_results_df.transpose()
 
@@ -129,14 +124,14 @@ sectors_results_df_transposed = sectors_results_df_transposed.where(sectors_resu
 all_dataframes_dict = {'scores_data_final' : scores_only_df,
                        'sections_results_data_final': sections_results_df,
                        'sectors_results_data_final' : sectors_results_df_transposed,
-                       'raw_data': raw_df}
+                       'raw_data_final': raw_df}
 
 # Store the all dataframes as csv in the corresponding folders. sub_folder_ls[0] is "data", see constants.py
 # Push DataFrames to Google Spreadsheet as new tabs
 
 for key, value in all_dataframes_dict.items():
     store_file(root = ROOT, file = value, file_name = key, destination_path = SUB_FOLDERS_LS[0])
-    if key is not 'raw_data':
+    if key is not 'raw_data_final':
         d2g.upload(value, SPREADSHEET_ID, key, credentials=credentials, row_names=True)
         
 # Create customised company profiles and store them at the PATH: /deliverables/company_profile/{company_name}
