@@ -21,22 +21,32 @@ This year, the Italian branch of TI carried out the second iteration of its TRAC
 ## Methodology 
 ### Data collection
 
-The data was collected in a Google Spreadsheet. Every row represented one company which was assessed across 61 questions, divided in the aforementioned 10 sections. 
+The data was collected in a Google Spreadsheet. Every row represented one company which was assessed across 61 questions, divided in the aforementioned 10 sections. In order to assess the questions, it was necessary to look for the information in several document types, such as:
+* Annual Reports, 
+* Sustainbility Reports, 
+* 231 Model, 
+* Anti Corruption Programme Documents, 
+* Code of Ethics, 
+
+To speed up the search, we used the google search engine capabilities, which allows to search file types and key words in the same domain: 
+* `in: URL filetype:pdf keyword` would search for keywork in all PDF files in the URL domain. 
+* `in: URL keyword`would search for keyword in the whole URL domain. 
 
 In the methodology of Transparency International Italia, the TRAC Index is the average of the results of the 10 sections a company has been assessed on. Each section has a different number of questions (see list above) and the section result is the weighted average of the questions scores obtained. 
 
-Each question can be graded on a scale of either
-* 0-1, or
-* 0-1-2, or 
+### Database structure
+
+We created a Google spreadsheet of 51x244. Each one of the 61 questions could be graded in one of the three following scales:
+* 0-1,
+* 0-1-2,
 * 0-1-2-3. 
 
-depending on the weight that TI attributes to that particular question in the section.
-
-For every question, in the Google Spreadsheet, there are 4 columns 
-* Score, 
-* Source, 
-* URL, 
-* Comment 
+For every question, we created 5 columns 
+* Score: integer type. 
+* Source: string type indicating the type of document the information was found in (Annual Report etc.)
+* URL: string type indicating the URL of the Source. 
+* Comment: string type explaining why the company had obtained the given score. 
+* Space: Empty column allowing 
 
 where Source is the document type where the information that underpins the attribution of the score was found, its URL and a Comment that explains why the company has got that Score (explaining how the information retrived satsfies or not TI methodology). 
 The way the columns were built in the original Google Spreadsheet is this:
