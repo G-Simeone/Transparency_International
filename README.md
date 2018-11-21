@@ -46,11 +46,13 @@ For every question, we created 5 columns
 * Source: string type indicating the type of document the information was found in (Annual Report etc.)
 * URL: string type indicating the URL of the Source. 
 * Comment: string type explaining why the company had obtained the given score. 
-* Space: Empty column allowing 
+* Space: Empty column to allow for grouping and minimizing columns. 
 
-where Source is the document type where the information that underpins the attribution of the score was found, its URL and a Comment that explains why the company has got that Score (explaining how the information retrived satsfies or not TI methodology). 
-The way the columns were built in the original Google Spreadsheet is this:
-ColumnName_SectionNumber_QuestionNumber, example: Score_1_3 would be the Score of the 3rd question of Section 1. 
+The way the column names were given in the Google Spreadsheet is this:
+`ColumnName_SectionNumber_QuestionNumber` example: Score_1_3 would be the Score of the 3rd question of Section 1. 
+
+### Extraction, Transformation and Loading Pipeline. 
+
 The objective of this pipeline is to:
 1) Extract the raw data from the Google Spreadsheet and create a raw data and a scores only dataframes. 
 2) Use the scores only dataframe to calculate the results of every section, and create a sections results dataframe. 
