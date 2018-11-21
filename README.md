@@ -21,10 +21,24 @@ This year, the Italian branch of TI carried out the second iteration of its TRAC
 ## Methodology 
 ### Data collection
 
-The data was collected in a Google Spreadsheet
-Variable definition and logic is as follows (also applicable to utils.py, spidercharts.py, constants.py and company_profiles.py)
-In the methodology of Transparency International (TI), the Trasparency in Corporate Reporting Index (TRAC Index) is the average of the results of the 10 sections a company has been assessed on. Each section has a different number of questions, and the section result is the weighted average of the questions scores obtained. Each question can be graded on a scale of either 0-1, 0-1-2, or 0-1-2-3, depending on the weight that TI attributes to that particular question in the section.
-For every question, in the original Google Spreadsheet, there are 4 columns (Score, Source, URL, Comment) where Source is the document type where the information that underpins the attribution of the score was found, its URL and a Comment that explains why the company has got that Score (explaining how the information retrived satsfies or not TI methodology). 
+The data was collected in a Google Spreadsheet. Every row represented one company which was assessed across 61 questions, divided in the aforementioned 10 sections. 
+
+In the methodology of Transparency International Italia, the TRAC Index is the average of the results of the 10 sections a company has been assessed on. Each section has a different number of questions (see list above) and the section result is the weighted average of the questions scores obtained. 
+
+Each question can be graded on a scale of either
+* 0-1, or
+* 0-1-2, or 
+* 0-1-2-3. 
+
+depending on the weight that TI attributes to that particular question in the section.
+
+For every question, in the Google Spreadsheet, there are 4 columns 
+* Score, 
+* Source, 
+* URL, 
+* Comment 
+
+where Source is the document type where the information that underpins the attribution of the score was found, its URL and a Comment that explains why the company has got that Score (explaining how the information retrived satsfies or not TI methodology). 
 The way the columns were built in the original Google Spreadsheet is this:
 ColumnName_SectionNumber_QuestionNumber, example: Score_1_3 would be the Score of the 3rd question of Section 1. 
 The objective of this pipeline is to:
