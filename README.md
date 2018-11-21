@@ -1,5 +1,5 @@
 # Transparency International Italia 
-## Transparency in Corporate Reporting
+## Transparency in Corporate Reporting (Italy) Index
 ### Background 
 
 Transparency International (TI) is one of the pioneers in the fight for a more transparent corporate reporting. Being the leader of anti-corruption standards in the world, the Business Inegrity team of TI created what are now known in the compliance industry the [Business Principles for Countering Bribery (BPCB)](https://www.transparency.org/whatwedo/publication/business_principles_for_countering_bribery) and its [Commentary](https://www.transparency.org/files/content/publication/2015_BusinessPrinciplesCommentary_EN.pdf) which act as a go to resource for multinationals designing their anti-corruption programmes. 
@@ -18,7 +18,7 @@ This year, the Italian branch of TI carried out the second iteration of its TRAC
 9. Anti-corruption training (8 questions)
 10. Sustainble Projects Transparency (4 questions)
 
-## Methodology 
+## The Data 
 ### Data collection
 
 The data was collected in a Google Spreadsheet. Every row represented one company which was assessed across 61 questions, divided in the aforementioned 10 sections. In order to assess the questions, it was necessary to look for the information in several document types, such as:
@@ -51,7 +51,7 @@ For every question, we created 5 columns
 The way the column names were given in the Google Spreadsheet is this:
 `ColumnName_SectionNumber_QuestionNumber` example: Score_1_3 would be the Score of the 3rd question of Section 1. 
 
-### Extraction, Transformation and Loading Pipeline. 
+### Data Extraction, Transformation and Loading (ETL) Pipeline. 
 
 The objective of this pipeline is to:
 1) Extract the raw data from the Google Spreadsheet and create a raw data and a scores only dataframes. 
@@ -65,3 +65,22 @@ The objective of this pipeline is to:
    sections results with the averages results of the sections of all companies in the sample. 
 6) Create a folder strucutre where to store the dataframes as .csv and the company profiles as .docx and the visulations as  
    .png. 
+   
+### Deliverables
+File structure created on the computer. 
+
+## Set-up 
+
+### Working with the Google API
+Activate Google API
+Get a client.json 
+Get a key.json 
+
+### Software set-up
+Windows 
+Unix
+
+## Reusability 
+### How to change data
+### How to add data
+### How to replicate the study with new data
