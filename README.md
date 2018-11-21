@@ -78,7 +78,7 @@ Get a key.json
 
 ### Software set-up
 Windows 
-Unix
+What could go wrong and how to fix it
 
 ## Reusability 
 ### How to change data
