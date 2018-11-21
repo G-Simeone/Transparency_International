@@ -7,16 +7,16 @@ Transparency International (TI) is one of the pioneers in the fight for a more t
 Based on the best practices laid down in the BPCP, the Business Integrity team developed a questionnaire to assess the level of adherence of multinationals to the BPCB, giving birth to the [Transparency in Corporate Reporting (TRAC)](https://www.transparency.org/files/content/feature/2016_TRACEMM_Index.png), a study which has already been conducted several times in [2009](https://www.transparency.org/whatwedo/publication/transparency_in_reporting_on_anti_corruption_a_report_on_corporate_practice), [2011](https://www.transparency.org/whatwedo/publication/promoting_revenue_transparency_2011_report_on_oil_and_gas_companies), [2012](https://www.transparency.org/news/feature/shining-a-light-on-the-worlds-biggest-companies), [2013](https://www.transparency.org/news/feature/emerging_market_multinational_companies_ready_for_prime_time), [2014](https://www.transparency.org/news/feature/global_companies_global_transparency), [2015](https://www.transparency.org/whatwedo/publication/transparency_in_corporate_reporting_assessing_the_worlds_largest_telecommun), and [2016](https://www.transparency.org/news/feature/emerging_markets_pathetic_transparency). 
 
 This year, the Italian branch of TI carried out the second iteration of its TRAC, assessing the transparency and strength of anti-corruption programmes of 50 Italian Multinationals, whose final report can be downloaded here across 61 questions, divided in 10 sections:
-1. Public Committment against Corruption
-2. Code of Conduct
-3. Anti-Corruption Programme
-4. Conflict of Interests
-5. Lobbying 
-6. Organisational Transparency
-7. Anti-corruption training 
-8.
-9. 
-10. 
+1. Public Committment against Corruption (5 questions)
+2. Anti-Corruption Programme (9 questions)
+3. Code of Conduct (10 questions)
+4. Whistleblowing (10 questions)
+5. Lobbying (6 questions)
+6. Conflict of Interests (6 questions)
+7. Political Contribution (4 questions)
+8. Organisational Transparency (5 questions)
+9. Anti-corruption training (8 questions)
+10. Sustainble Projects Transparency (4 questions)
 
 ## Methodology 
 ### Data collection
