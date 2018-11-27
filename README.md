@@ -66,21 +66,21 @@ The objective of this pipeline is to:
 6) Create a folder strucutre where to store the dataframes as .csv and the company profiles as .docx and the visulations as  
    .png. 
    
-### Deliverables
+### Deliverables TODO
 File structure created on the computer. 
 
-## Set-up 
+## Set-up TODO
 
-### Working with the Google API
+### Working with the Google API TODO
 Activate Google API
 Get a client.json 
 Get a key.json 
 
-### Software set-up
+### Software set-up TODO
 Windows 
 What could go wrong and how to fix it
 
-## Reusability 
+## Reusability TODO
 ### How to change data
 ### How to add data
 ### How to replicate the study with new data
