@@ -75,7 +75,7 @@ The deliverables for this project are:
 3) 50x3 Spidercharts 
 
 Moreover, deliverable 2 and 3 should be saved in a folder structure decided by the client. 
-`
+```
 .
 ├── company_profiles
 │   ├── Abb Italia
@@ -133,11 +133,11 @@ Moreover, deliverable 2 and 3 should be saved in a folder structure decided by t
     ├── scores_data_test.csv
     ├── sections_results_data_test.csv
     └── sectors_results_data_test.csv
-`
+```
 
 When clicking on one of the companies folder, then we would find 4 files:
 
-`
+```
 .
 ├── company_profiles
 │   ├── Abb Italia
@@ -146,7 +146,7 @@ When clicking on one of the companies folder, then we would find 4 files:
 │   │   ├── Abb Italia_Medie Globali_spiderchart.png
 │   │   ├── Abb Italia_spiderchart_data.csv
 │   │   └── Abb Italia_spiderchart.png
-`
+```
 
 See below an example of three spidercharts that the pipeline would create.
 
