@@ -68,8 +68,14 @@ The objective of this pipeline is to:
    sections results with the averages results of the sections of all companies in the sample. 
 6) Create a folder strucutre where to store the dataframes as `.csv` and the company profiles as `.docx` and the visulations as `.png.` 
    
-### Deliverables TODO
-File structure created on the computer. 
+### Deliverables 
+The deliverables for this project are: 1) A reproducible ETL pipeline 2) 50 Company Profiles and 3) 50x3 Spidercharts. 2 and 3 should be saved in a folder structure decided by the client. 
+
+Below the folder structre as it should appear after running the pipeline. 
+
+
+
+
 
 ## Set-up TODO
 
