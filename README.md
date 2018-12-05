@@ -164,18 +164,29 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 Install Python 3.6
 Install Pip
 Install VirtualEnv
+Install VirtualEnvWrapper-win
 Create environment using virtualenv and `requirement.txt` 
+Install Git for Windows
 
 #### (!) WARNING (!)
-Do not create the environment with `Conda`, I tried and the [Conda forge](https://anaconda.org/conda-forge) channel somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
+Do not create the environment with [`Conda`](https://anaconda.org/conda-forge/df2gspread), I tried and the Conda forge channel somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
 
-### Working with the Google API TODO
+Now we got everything we need, let's clone this repo on our machine. 
+We move inside it, but before being able to run the programme we need to activate the Google API, remember, we are working off a Google Spreadsheet and we will push back to it the new tables. 
+
+#### Working with the Google API 
 Activate Google API
 Get a client.json 
 Get a key.json 
 
+Now open the `constant.py` file, if you don't have any programme that reads `.py` extensions (like [`Sublime Text`](https://fileinfo.com/software/jon_skinner/sublime_text), you can also just use the good old [`Microsoft Notepad`](https://fileinfo.com/software/microsoft/notepad). 
 
 ## Reusability TODO
+Now it's 2019 and you want to do a new iteration of this study. 
+
+CHILL GIF.  
+
+
 ### How to change data
 ### How to add data
 ### How to replicate the study with new data
