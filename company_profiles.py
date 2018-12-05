@@ -51,11 +51,10 @@ def add_hyperlink(paragraph, url, text):
 def create_save_company_profiles(df_raw_data, df_sections, intro_for_analysis_docx, sections_headings, sections_dict, root, sub_folders_names):
     
     '''
-    Function that allows to embed an hyperlink in a paragraph. 
-  
-    params: df_raw_data (docx.paragraph, paragraph to which add the hyperlink).
-            df_sections (string, url of the hyperlink).
-    return: None. 
+    TODO  
+    params: .
+            .
+    return: . 
     '''
     
     for company in df_raw_data.index:
@@ -102,8 +101,8 @@ def create_save_company_profiles(df_raw_data, df_sections, intro_for_analysis_do
                                        .alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
                 
                 # Insert paragraph for every question. 
-                for question in range(1, len(value)):
-                    p = document.add_paragraph("{} ha ottenuto un punteggo pari a {} alla domanda {}, perché {} Si veda qui: "
+                for question in range(1, len(value)+1):
+                    p = document.add_paragraph("{} ha ottenuto un punteggio pari a {} alla domanda {}, perché {} Si veda qui: "
                                                .format (company, 
                                                         df_raw_data.loc[company, "Score_{}_{}".format(key, question)],
                                                         "{}_{}".format(key, question), 

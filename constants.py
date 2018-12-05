@@ -9,7 +9,7 @@ SCOPE = "https://spreadsheets.google.com/feeds"
 
 # KEY is the name of the json file that you created to have access to the Google API 
 # See: https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/
-KEY = "Jupyter_meets_GSheet-a279ad757691.json"
+KEY = "jupyter-meets-gsheet-f71096c7c7b8.json"
 
 # This is the ID of your google spreadsheet, it is contained in its URL, in our case, see:
 # https://docs.google.com/spreadsheets/d/WHAT IS HERE/edit#gid=0
@@ -22,7 +22,7 @@ WORKSHEET = "Full_DB"
 SECTIONS_DICT = {
                  "1" : [1, 2, 3, 4, 5], 
                  "2" : [1, 2, 3, 4, 5, 6, 7, 8, 9],
-                 "3" : [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                 "3" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
                  "4" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
                  "5" : [1, 2, 3, 4, 5, 6],
                  "6" : [1, 2, 3, 4, 5, 6],
@@ -55,7 +55,7 @@ SECTIONS_SHORT_NAMES = {"Section_1":"Dichiarazioni \nPubbliche",
 SECTIONS_LONG_NAMES = ["Dichiarazioni e posizioni pubbliche", "Modello 231 o piano anti corruzione", "Codice etico o di condotta", "Politica di whistleblowing e sistema di segnalazione", "Lobbying","Conflitto d'interesse", "Finanziamento alla politica (Partiti, candidati, e fondazioni politiche)", "Trasparenza organizzativa e attività estere", "Formazione anti corruzione", "Progetti di sostenibilità"]
 
 # List of sections maximum scores possible (used in utils.py to calculate the average per section).
-MAX_RESULTS_LS = [10, 17, 18, 20, 12, 12, 10, 10, 16, 8]
+MAX_RESULTS_LS = [10, 17, 19, 20, 12, 12, 8, 10, 16, 8]
 
 
 # Create dictionary to associate bands to score ranges. 
