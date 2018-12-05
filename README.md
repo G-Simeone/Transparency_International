@@ -69,24 +69,36 @@ The objective of this pipeline is to:
 6) Create a folder strucutre where to store the dataframes as `.csv` and the company profiles as `.docx` and the visulations as `.png.` 
    
 ### Deliverables 
-The deliverables for this project are: 1) A reproducible ETL pipeline 2) 50 Company Profiles and 3) 50x3 Spidercharts. 2 and 3 should be saved in a folder structure decided by the client. 
+The deliverables for this project are: 
+1) A reproducible ETL pipeline 
+2) 50 Company Profiles 
+3) 50x3 Spidercharts 
 
-Below the folder structre as it should appear after running the pipeline. 
+Moreover, deliverable 2 and 3 should be saved in a folder structure decided by the client. 
+
+See below an example of three spidercharts that the pipeline would create.
 
 
 
+It's important to notice that there was an edge-case to be handled in the creation of the spiderchart, when a company had been attributed an "N/A" to a certain section (say, lobbying) because they openly said to refrain from any such activities. In this case we had to artificially attribute to every  `None` in Python a 0.01 and deactivating the label by adding NA, "Lobbying (NA)". 
+
+Here you can download an example of a company profile in `.docx`. Why not directly pdf? Because the client might want to tweak the language. 
+
+### Software set-up 
+
+We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
 
 
-## Set-up TODO
+Windows 
+What could go wrong and how to fix it
+
+
 
 ### Working with the Google API TODO
 Activate Google API
 Get a client.json 
 Get a key.json 
 
-### Software set-up TODO
-Windows 
-What could go wrong and how to fix it
 
 ## Reusability TODO
 ### How to change data
