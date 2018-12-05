@@ -75,6 +75,78 @@ The deliverables for this project are:
 3) 50x3 Spidercharts 
 
 Moreover, deliverable 2 and 3 should be saved in a folder structure decided by the client. 
+`
+.
+├── company_profiles
+│   ├── Abb Italia
+│   ├── A.C. Milan S.p.A.
+│   ├── Ali
+│   ├── Armani
+│   ├── Ast
+│   ├── Barilla Holding
+│   ├── Brembo
+│   ├── Calzedonia
+│   ├── Cassa Depositi e Prestiti
+│   ├── Costa crociere
+│   ├── Danieli & C.
+│   ├── Edison
+│   ├── Enel
+│   ├── Eni
+│   ├── Falk
+│   ├── Fastweb
+│   ├── Ferrari
+│   ├── Ferrero
+│   ├── Ferrovie dello Stato
+│   ├── GE Italia Holding
+│   ├── Generali
+│   ├── Gruppo Cremonini
+│   ├── Gruppo GSE
+│   ├── Inter
+│   ├── Intesa San Paolo
+│   ├── Juventus 
+│   ├── Leonardo
+│   ├── Luxotica
+│   ├── Magneti Marelli
+│   ├── Mediaset
+│   ├── MSC
+│   ├── Napoli
+│   ├── OTB
+│   ├── Parmalat
+│   ├── Pirelli
+│   ├── Poste Italiane
+│   ├── Prada
+│   ├── RAI
+│   ├── Rina
+│   ├── Roma
+│   ├── Saes
+│   ├── Snam
+│   ├── Terna
+│   ├── Tim
+│   ├── Tiscali
+│   ├── UBI Banca
+│   ├── Unicredit
+│   ├── Veronesi Holdings SPA
+│   ├── Vodafone
+│   └── Wind Tre
+└── data
+    ├── raw_data_test.csv
+    ├── scores_data_test.csv
+    ├── sections_results_data_test.csv
+    └── sectors_results_data_test.csv
+`
+
+When clicking on one of the companies folder, then we would find 4 files:
+
+`
+.
+├── company_profiles
+│   ├── Abb Italia
+│   │   ├── Abb Italia_analisi.docx
+│   │   ├── Abb Italia_Meccanica_spiderchart.png
+│   │   ├── Abb Italia_Medie Globali_spiderchart.png
+│   │   ├── Abb Italia_spiderchart_data.csv
+│   │   └── Abb Italia_spiderchart.png
+`
 
 See below an example of three spidercharts that the pipeline would create.
 
