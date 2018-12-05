@@ -160,11 +160,14 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 
 We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
 
+4 Steps (TODO)
+Install Python 3.6
+Install Pip
+Install VirtualEnv
+Create environment using virtualenv and `requirement.txt` 
 
-Windows 
-What could go wrong and how to fix it
-
-
+#### (!) WARNING (!)
+Do not create the environment with `Conda`, I tried and the [Conda forge](https://anaconda.org/conda-forge) channel somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
 
 ### Working with the Google API TODO
 Activate Google API
