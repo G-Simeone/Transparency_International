@@ -150,7 +150,7 @@ When clicking on one of the companies folder, then we would find 4 files:
 
 See below an example of three spidercharts that the pipeline would create.
 
-
+====> INSERT PNG OF SPIDERCHARTS
 
 It's important to notice that there was an edge-case to be handled in the creation of the spiderchart, when a company had been attributed an "N/A" to a certain section (say, lobbying) because they openly said to refrain from any such activities. In this case we had to artificially attribute to every  `None` in Python a 0.01 and deactivating the label by adding NA, "Lobbying (NA)". 
 
@@ -161,12 +161,12 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
 
 4 Steps (TODO)
-Install Python 3.6
-Install Pip
-Install VirtualEnv
-Install VirtualEnvWrapper-win
-Create environment using virtualenv and `requirement.txt` 
-Install Git for Windows
+* Install Python 3.6
+* Install Pip
+* Install VirtualEnv
+* Install VirtualEnvWrapper-win
+* Create environment using virtualenv and `requirement.txt` 
+* Install Git for Windows
 
 #### (!) WARNING (!)
 Do not create the environment with [`Conda`](https://anaconda.org/conda-forge/df2gspread), I tried and the Conda forge channel somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
@@ -175,16 +175,16 @@ Now we got everything we need, let's clone this repo on our machine.
 We move inside it, but before being able to run the programme we need to activate the Google API, remember, we are working off a Google Spreadsheet and we will push back to it the new tables. 
 
 #### Working with the Google API 
-Activate Google API
-Get a client.json 
-Get a key.json 
+* Activate Google API
+* Get a client.json 
+* Get a key.json 
 
 Now open the `constant.py` file, if you don't have any programme that reads `.py` extensions (like [`Sublime Text`](https://fileinfo.com/software/jon_skinner/sublime_text), you can also just use the good old [`Microsoft Notepad`](https://fileinfo.com/software/microsoft/notepad). 
 
 ## Reusability TODO
 Now it's 2019 and you want to do a new iteration of this study. 
 
-CHILL GIF.  
+======> INSERT CHILL GIF.  
 
 
 ### How to change data
