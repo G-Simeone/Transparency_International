@@ -19,7 +19,7 @@ This year, the [Italian branch of TI](https://www.transparency.it/) carried out 
 10. Sustainble Projects Transparency (4 questions)
 
 ## The Data 
-### Data collection
+### Data collection 
 
 The data was collected in a Google Spreadsheet. Every row represented one company which was assessed across 61 questions, divided in the aforementioned 10 sections. In order to assess the questions, it was necessary to look for the information in several document types, such as:
 * Annual Reports, 
