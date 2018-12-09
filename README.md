@@ -160,8 +160,23 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 
 We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
 
+1. Get the Python version we need for this programme to run:
+   * Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
+   * CTRL+F `Python 3.6.5 - 2018-03-28`
+      *If you don't know if your Windows is a 32 or 64 bits:
+      -Open the Terminal Window by typing in the bottom-left bar "Terminal";
+      -Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64*.
+   * Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`
+   * At the end of the download this window pops up
+      *-Tick the box "Add Python 3.6 to PATH";
+       -Click on "Customize installation"; 
+       -Make sure the box "Install pip" is ticked;
+       -Click "Next";
+       -Tick "Add Python to environment variables".* 
+   * 
+   
+   
 4 Steps (TODO)
-* Install Python 3.6
 * Install Pip
 * Install VirtualEnv
 * Install VirtualEnvWrapper-win
