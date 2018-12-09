@@ -162,8 +162,8 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 
 Get the Python version we need for this programme to run:
 * Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
-* CTRL+F `Python 3.6.5 - 2018-03-28`
-     *If you don't know if your Windows is a 32 or 64 bits:*
+* CTRL+F `Python 3.6.5 - 2018-03-28`.
+*If you don't know if your Windows is a 32 or 64 bits:*
      * Open the Terminal Window by typing in the bottom-left bar "Terminal";
      * Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64*.
 * Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`
