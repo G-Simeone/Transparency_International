@@ -160,7 +160,7 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 
 We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
 
-Get Python and pip:
+1) Download Python, pip, virtualenv and virtualenvwrapper-win:
 
 * Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
 * CTRL+F `Python 3.6.5 - 2018-03-28`.
@@ -181,31 +181,31 @@ Get Python and pip:
      * Type `pip install virtualenv`.
      
 * Install virtualenvwrapper-win:
-     * Always on the Terminal window type `pip install virtualenvwrapper-win`
-     
-* Install VirtualEnvWrapper-win
-* Create environment using virtualenv and `requirement.txt` 
-* Install Git for Windows
+     * Always on the Terminal window type `pip install virtualenvwrapper-win`.
 
 #### (!) WARNING (!)
-Do not create the environment with [`Conda`](https://anaconda.org/conda-forge/df2gspread), I tried and the Conda forge channel somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
+We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.org/conda-forge/df2gspread), somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
 
-Now we got everything we need, let's clone this repo on our machine. 
-We move inside it, but before being able to run the programme we need to activate the Google API, remember, we are working off a Google Spreadsheet and we will push back to it the new tables. 
+2) Download Git for Windows. 
+* Go to [`Git for Windows`](https://gitforwindows.org/) and Download it (keep clicking on "Next" without changing the options and boxes ticked for you). 
 
-#### Working with the Google API 
+3) Download this repository on your PC. 
+
+4) Create environment using virtualenv + `requirements.txt`
+
+5) Working with the Google API 
 * Activate Google API
 * Get a client.json 
 * Get a key.json 
 
+6) Change the name of key.json in `constants.py`
 Now open the `constant.py` file, if you don't have any programme that reads `.py` extensions (like [`Sublime Text`](https://fileinfo.com/software/jon_skinner/sublime_text), you can also just use the good old [`Microsoft Notepad`](https://fileinfo.com/software/microsoft/notepad). 
+
+7) Run `app.py`
+
 
 ## Reusability TODO
 Now it's 2019 and you want to do a new iteration of this study. 
 
-======> INSERT CHILL GIF.  
-
-
-### How to change data
-### How to add data
+### How to change/add data
 ### How to replicate the study with new data
