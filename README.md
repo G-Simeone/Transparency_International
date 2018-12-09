@@ -166,7 +166,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 * CTRL+F `Python 3.6.5 - 2018-03-28`.
      * If you don't know if your Windows is a 32 or 64 bits:
      * Open the Terminal Window by typing in the bottom-left bar "Terminal";
-     * Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64*.
+     * Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64.
 * Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`
 * At the end of the download the installation window pops up:
     * Tick the box "Add Python 3.6 to PATH"; *(Adding Python to the PATH will allow you to call if from the Terminal.)*
@@ -174,7 +174,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
     * Click on "Customize installation"; 
     * Make sure the box "Install pip" is ticked;
     * Click "Next";
-    * Tick "Add Python to environment variables".* 
+    * Tick "Add Python to environment variables".
 
 * Install VirtualEnv:
      * Open the Terminal window;
@@ -190,8 +190,15 @@ We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.
 * Go to [`Git for Windows`](https://gitforwindows.org/) and Download it (keep clicking on "Next" without changing the options and boxes ticked for you). 
 
 3) Download this repository on your PC. 
+* From the Terminal window type `git clone https://github.com/gsime1/Transparency_International_ETL_Pipeline` 
+* From the Windows search box search "Transparency_International_ETL_Pipeline", right-click and select "copy path". 
+* From the Terminal window type `cd`, then right clck and paste the path to the "Transparency_International_ETL_Pipeline" folder on your computer. 
+* the prompter sign `>` of the command line should now contain `Transparency_International_ETL_Pipeline` which means you are inside the folder from the terminal (`cd` actually means, change directory, whereby we mean go to this folder whose path I gave you). 
 
 4) Create environment using virtualenv + `requirements.txt`
+* From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish)*
+* Activate your environment by typing in the command line `.\trac2018\Scripts\activate` *(if you gave your virtual environment another name make sure you're changing the in between `.\whaevertyoucalledtheenvironment\Scripts\activate`.*
+* Install all necessary packages typing `pip install -r requirements.txt`. This might take few minutes.
 
 5) Working with the Google API 
 * Activate Google API
