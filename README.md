@@ -196,6 +196,8 @@ We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.
 * the prompter sign `>` of the command line should now contain `Transparency_International_ETL_Pipeline` which means you are inside the folder from the terminal (`cd` actually means, change directory, whereby we mean go to this folder whose path I gave you). 
 
 4) Create environment using virtualenv + `requirements.txt`
+#### (!) WARNING (!)
+Before downloading all needed dependencies, we will need you to download [Visual Studio 2015 Community Edition (or any later version, when these are released)](https://visualstudio.microsoft.com/de/downloads/?rr=https%3A%2F%2Fpackaging.python.org%2F). 
 * From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish)*
 * Activate your environment by typing in the command line `.\trac2018\Scripts\activate` *(if you gave your virtual environment another name make sure you're changing the in between `.\whaevertyoucalledtheenvironment\Scripts\activate`.*
 * Install all necessary packages typing `pip install -r requirements.txt`. This might take few minutes.
