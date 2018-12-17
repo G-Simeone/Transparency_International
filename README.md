@@ -173,22 +173,25 @@ We assume that the client will use a Windows OS, so below the instructions on ho
    <li> Open the Terminal Window by typing in the bottom-left bar "Terminal"; </li>
    <li> Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64.</li>
 </ul>
-<li> Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`<li>
-+ At the end of the download the installation window pops up:
-    "+" Tick the box "Add Python 3.6 to PATH"; *(Adding Python to the PATH will allow you to call if from the Terminal.)*
-    "+" OPTIONAL: to be sure you could check the we added Python to the computer's PATH by following [these instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/). 
-    "+" Click on "Customize installation"; 
-    "+" Make sure the box "Install pip" is ticked;
-    "+" Click "Next";
-    "+" Tick "Add Python to environment variables".
-
-+ Install VirtualEnv:
-     "+" Open the Terminal window;
-     "+" Type `pip install virtualenv`.
-     
-+ Install virtualenvwrapper-win:
-     "+" Always on the Terminal window type `pip install virtualenvwrapper-win`.
-</ul>
+<li> Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`</li>
+<li> At the end of the download the installation window pops up: </li>
+   <ul>
+    <li> Tick the box "Add Python 3.6 to PATH"; (Adding Python to the PATH will allow you to call if from the Terminal.)</li>
+    <li> OPTIONAL: to be sure you could check the we added Python to the computer's PATH by following [these instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).</li>
+    <li> Click on "Customize installation"; </li>
+    <li> Make sure the box "Install pip" is ticked;</li>
+    <li> Click "Next";</li>
+    <li> Tick "Add Python to environment variables".</li>
+  </ul>
+<li> Install VirtualEnv:</li>
+    <ul>
+     <li> Open the Terminal window;</li>
+     <li> Type `pip install virtualenv`.</li>
+   </ul>
+<li> Install virtualenvwrapper-win:</li>
+    <ul>
+     <li> Always on the Terminal window type `pip install virtualenvwrapper-win`.</li>
+    </ul>
 #### (!) WARNING (!)
 We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.org/conda-forge/df2gspread), somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
 </details>
