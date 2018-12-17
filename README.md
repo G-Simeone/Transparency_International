@@ -200,11 +200,7 @@ Before downloading all needed dependencies, we will need you to download [Visual
 * From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish)*
 * Activate your environment by typing in the command line `.\trac2018\Scripts\activate` *(if you gave your virtual environment another name make sure you're changing the in between `.\whaevertyoucalledtheenvironment\Scripts\activate`.*
 * Install all necessary packages typing `pip install -r requirements.txt`. This might take few minutes.
-* If you encounter problems with the `pycrypto` library, from the Terminal window type:
-   * `pip uninstall pycrypto`
-   * `pip install pycryptodome`
-   * and then reinstall the dependencies `pip install -r requirements.txt`. 
-   * If you still encounter problems with the pycrypto library, download directly the binary files from for 
+* Should you get any error related to the `pycrypto` library, follow (these wonderful instructions)[https://github.com/sfbahr/PyCrypto-Wheels].  
 
 5) Working with the Google API 
 * Activate Google API by following step by step the instructions of [this link](https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/), stop at the end of Part 1. 
@@ -216,7 +212,6 @@ Before downloading all needed dependencies, we will need you to download [Visual
 * Save and close `contstants.py`. 
 
 7) From the Terminal run `Python app.py`
-
 
 ## Reusability
 Now it's 2019 and you want to do a new iteration of this study. 
