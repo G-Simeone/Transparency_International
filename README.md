@@ -162,9 +162,9 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 ### Software set-up 
 
 We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
-
-1) Download Python, pip, virtualenv and virtualenvwrapper-win:
-
+<details open>
+<summary> 1) Download Python, pip, virtualenv and virtualenvwrapper-win: </summary>
+<br>
 * Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
 * CTRL+F `Python 3.6.5 - 2018-03-28`.
      * If you don't know if your Windows is a 32 or 64 bits:
@@ -188,7 +188,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 
 #### (!) WARNING (!)
 We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.org/conda-forge/df2gspread), somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
-
+</details>
 2) Download Git for Windows. 
 * Go to [`Git for Windows`](https://gitforwindows.org/) and Download it (keep clicking on "Next" without changing the options and boxes ticked for you). 
 
