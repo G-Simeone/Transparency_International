@@ -161,37 +161,37 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 
 ### Software set-up 
 
-We assume that the client will use a Windows OS, so below the instructions on how to download python and set up the environment needed to run `app.py`. 
+The user of this pipeline will use Windows, so below the instructions on how to download Python and set up the environment needed to run `app.py`. 
 <details open>
 <summary> 1) Download Python, pip, virtualenv and virtualenvwrapper-win: </summary>
 <br>
 <ul>
-<li> Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). </li>
-<li> CTRL+F "Python 3.6.5 - 2018-03-28".</li>
-<ul>
-   <li> If you don't know if your Windows is a 32 or 64 bits:</li>
-   <li> Open the Terminal Window by typing in the bottom-left bar "Terminal"; </li>
-   <li> Type in the terminal the following command: <code>echo %PROCESSOR_ARCHITECTURE%</code> and you will know if it is 32 or 64.</li>
-</ul>
-<li> Click on the link "Windows x86-WHAT_BITS_YOU_HAVE executable installer"</li>
-<li> At the end of the download the installation window pops up: </li>
-   <ul>
-    <li> Tick the box "Add Python 3.6 to PATH"; (Adding Python to the PATH will allow you to call if from the Terminal.)</li>
-    <li> OPTIONAL: to be sure you could check the we added Python to the computer's PATH by following <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/"> these instructions </a>.</li>
-    <li> Click on "Customize installation"; </li>
-    <li> Make sure the box "Install pip" is ticked;</li>
-    <li> Click "Next";</li>
-    <li> Tick "Add Python to environment variables".</li>
-  </ul>
-<li> Install VirtualEnv:</li>
-    <ul>
-     <li> Open the Terminal window;</li>
-     <li> Type <samp>pip install virtualenv<samp>.</li>
-   </ul>
-<li> Install virtualenvwrapper-win:</li>
-    <ul>
-     <li> Always on the Terminal window type <kbd>pip install virtualenvwrapper-win</kbd></li>
+   <li> Go to the <a href="https://www.python.org/downloads/windows/">Python releases for Windows</a>. </li>
+   <li> CTRL+F "Python 3.6.5 - 2018-03-28".</li>
+      <ul>
+         <li> If you don't know if your Windows is a 32 or 64 bits:</li>
+         <li> Open the Terminal Window by typing in the bottom-left bar "Terminal"; </li>
+         <li> Type in the terminal the following command: <code>echo %PROCESSOR_ARCHITECTURE%</code> and you will know if it is 32 or 64.</li>
+     </ul>
+  <li> Click on the link "Windows x86-WHAT_BITS_YOU_HAVE executable installer"</li>
+  <li> At the end of the download the installation window pops up: </li>
+      <ul>
+          <li> Tick the box "Add Python 3.6 to PATH"; (Adding Python to the PATH will allow you to call if from the Terminal.)</li>
+          <li> OPTIONAL: to be sure you could check the we added Python to the computer's PATH by following <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/"> these instructions </a>.</li>
+          <li> Click on "Customize installation"; </li>
+          <li> Make sure the box "Install pip" is ticked;</li>
+          <li> Click "Next";</li>
+          <li> Tick "Add Python to environment variables".</li>
+      </ul>
+  <li> Install VirtualEnv:</li>
+     <ul>
+        <li> Open the Terminal window;</li>
+        <li> Type <samp>pip install virtualenv<samp>.</li>
     </ul>
+  <li> Install virtualenvwrapper-win:</li>
+     <ul>
+        <li> Always on the Terminal window type <code>pip install virtualenvwrapper-win</code></li>
+     </ul>
 PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-forge/df2gspread"> Conda forge channel </a>, somehow downloads an old version of the <a href="https://github.com/maybelinot/df2gspread"> df2gspread </a>) library giving you errors at run time. 
 </details>
 
