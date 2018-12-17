@@ -215,14 +215,14 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
 </details>
 
 <details>
-   <summary>4) Create environment using virtualenv and `requirements.txt`</summary>
+   <summary>4) Create environment using virtualenv and <code>requirements.txt</code>.</summary>
       <br>
          <ul>
             <li>Before downloading all needed dependencies, we will need you to download <a href="https://visualstudio.microsoft.com/de/downloads/?rr=https%3A%2F%2Fpackaging.python.org%2F"> Visual Studio 2015 Community Edition (or any later version, when these are released</a>.</li>
-            <li>From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish).</li>
-            <li>Activate your environment by typing in the command line <code>.\trac2018\Scripts\activate</code> (if you gave your virtual environment another name make sure you're changing the in between <code>.\whaevertyoucalledtheenvironment\Scripts\activate`</code>.</li>
+            <li>From the command line type <code>virtualenv trac2018</code> (trac2018 is the name I chose, you can give your environment any name you wish).</li>
+            <li>Activate your environment by typing in the command line <code>.\trac2018\Scripts\activate</code> (if you gave your virtual environment another name make sure you're changing the in between <code>.\whaevertyoucalledtheenvironment\Scripts\activate</code>.</li>
             <li>Install all necessary packages typing <code>pip install -r requirements.txt</code>. This might take few minutes.</li>
-            <li>Should you get any error related to the "pycrypto" library, follow <a href="https://github.com/sfbahr/PyCrypto-Wheels">these wonderful instructions</a>.</li>
+            <li>Should you get any error related to the <code>pycrypto</code> library, follow <a href="https://github.com/sfbahr/PyCrypto-Wheels">these wonderful instructions</a>.</li>
         </ul>
 </details>
 
@@ -239,7 +239,7 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
             <li>Save and close <code>contstants.py</code>.</li> 
         </ul>
 </details>
-
+<br>
 Once you have followed all instructions from 1 to 6, you can type from the Terminal `Python app.py`
 
 ## Reusability
