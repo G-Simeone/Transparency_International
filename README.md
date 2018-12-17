@@ -151,8 +151,8 @@ When clicking on one of the companies folder, then we would find 4 files:
 See below an example of three spidercharts that the pipeline would create.
 <p align="middle">
   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="250" />
-   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="270" />
-   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="300" />
+   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="280" />
+   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="320" />
 </p>
 
 It's important to notice that there was an edge-case to be handled in the creation of the spiderchart, when a company had been attributed an "N/A" to a certain section (say, lobbying) because they openly said to refrain from any such activities. In this case we had to artificially attribute to every  `None` in Python a 0.01 and deactivating the label by adding NA, "Lobbying (NA)". 
@@ -162,7 +162,7 @@ Here you can download an example of a company profile in `.docx`. Why not direct
 ### Software set-up 
 
 The user of this pipeline will use Windows, so below the instructions on how to download Python and set up the environment needed to run `app.py`. 
-<details open>
+<details>
 <summary> 1) Download Python, pip, virtualenv and virtualenvwrapper-win: </summary>
 <br>
 <ul>
