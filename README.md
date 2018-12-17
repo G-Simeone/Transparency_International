@@ -210,16 +210,20 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
    <li>From the Terminal window type <code>git clone https://github.com/gsime1/Transparency_International_ETL_Pipeline</code>.</li> 
    <li>From the Windows search box search "Transparency_International_ETL_Pipeline", right-click and select "copy path".</li>
    <li>From the Terminal window type <code>cd</code>, then right clck and paste.</li>
-   <li>the prompter sign <code> > </code> of the command line should now contain <code> Transparency_International_ETL_Pipeline </code> which means you are inside the folder from the terminal (<code> cd </code> actually means, change directory, whereby we mean go to this folder whose path I gave you).</li>
+   <li>the prompter sign <code>></code> of the command line should now contain <code> Transparency_International_ETL_Pipeline </code> which means you are inside the folder from the terminal (<code>cd</code> actually means, change directory, whereby we mean go to this folder whose path I gave you).</li>
 </ul>
 </details>
-
-4) Create environment using virtualenv + `requirements.txt`
-Before downloading all needed dependencies, we will need you to download [Visual Studio 2015 Community Edition (or any later version, when these are released)](https://visualstudio.microsoft.com/de/downloads/?rr=https%3A%2F%2Fpackaging.python.org%2F). 
-* From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish)*
-* Activate your environment by typing in the command line `.\trac2018\Scripts\activate` *(if you gave your virtual environment another name make sure you're changing the in between `.\whaevertyoucalledtheenvironment\Scripts\activate`.*
-* Install all necessary packages typing `pip install -r requirements.txt`. This might take few minutes.
-* Should you get any error related to the `pycrypto` library, follow [these wonderful instructions](https://github.com/sfbahr/PyCrypto-Wheels).  
+<details>
+   <summary>4) Create environment using virtualenv and `requirements.txt`</summary>
+<br>
+   <ul>
+      <li>Before downloading all needed dependencies, we will need you to download <a href="https://visualstudio.microsoft.com/de/downloads/?rr=https%3A%2F%2Fpackaging.python.org%2F"> Visual Studio 2015 Community Edition (or any later version, when these are released</a>.</li>
+      <li>From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish).</li>
+      <li>Activate your environment by typing in the command line <code>.\trac2018\Scripts\activate</code> (if you gave your virtual environment another name make sure you're changing the in between <code>.\whaevertyoucalledtheenvironment\Scripts\activate`</code>.</li>
+      <li>Install all necessary packages typing <code>pip install -r requirements.txt</code>. This might take few minutes.</li>
+      <li>Should you get any error related to the `pycrypto` library, follow <a href="https://github.com/sfbahr/PyCrypto-Wheels">these wonderful instructions</a>.</li>
+  </ul>
+</details>
 
 5) Working with the Google API 
 * Activate Google API by following step by step the instructions of [this link](https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/), stop at the end of Part 1. 
