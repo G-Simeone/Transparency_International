@@ -165,12 +165,15 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 <details open>
 <summary> 1) Download Python, pip, virtualenv and virtualenvwrapper-win: </summary>
 <br>
-   +Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
-+ CTRL+F `Python 3.6.5 - 2018-03-28`.
-     "+" If you don't know if your Windows is a 32 or 64 bits:
-     "+"  Open the Terminal Window by typing in the bottom-left bar "Terminal";
-     "+"  Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64.
-+ Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`
+<ul>
+<li> Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). </li>
+<li> CTRL+F `Python 3.6.5 - 2018-03-28`.</li>
+<ul>
+   <li> If you don't know if your Windows is a 32 or 64 bits:</li>
+   <li> Open the Terminal Window by typing in the bottom-left bar "Terminal"; </li>
+   <li> Type in the terminal the following command: `echo %PROCESSOR_ARCHITECTURE%` and you will know if it is 32 or 64.</li>
+</ul>
+<li> Click on the link `Windows x86-WHAT_BITS_YOU_HAVE executable installer`<li>
 + At the end of the download the installation window pops up:
     "+" Tick the box "Add Python 3.6 to PATH"; *(Adding Python to the PATH will allow you to call if from the Terminal.)*
     "+" OPTIONAL: to be sure you could check the we added Python to the computer's PATH by following [these instructions](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/). 
@@ -185,7 +188,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
      
 + Install virtualenvwrapper-win:
      "+" Always on the Terminal window type `pip install virtualenvwrapper-win`.
-
+</ul>
 #### (!) WARNING (!)
 We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.org/conda-forge/df2gspread), somehow downloads an old version of the [`df2gspread`](https://github.com/maybelinot/df2gspread) library giving you errors at run time. 
 </details>
