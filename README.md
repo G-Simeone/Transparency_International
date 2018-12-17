@@ -196,24 +196,29 @@ We decided not to use Miniconda as the [`Conda forge channel`](https://anaconda.
 * the prompter sign `>` of the command line should now contain `Transparency_International_ETL_Pipeline` which means you are inside the folder from the terminal (`cd` actually means, change directory, whereby we mean go to this folder whose path I gave you). 
 
 4) Create environment using virtualenv + `requirements.txt`
-#### (!) WARNING (!)
 Before downloading all needed dependencies, we will need you to download [Visual Studio 2015 Community Edition (or any later version, when these are released)](https://visualstudio.microsoft.com/de/downloads/?rr=https%3A%2F%2Fpackaging.python.org%2F). 
 * From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish)*
 * Activate your environment by typing in the command line `.\trac2018\Scripts\activate` *(if you gave your virtual environment another name make sure you're changing the in between `.\whaevertyoucalledtheenvironment\Scripts\activate`.*
 * Install all necessary packages typing `pip install -r requirements.txt`. This might take few minutes.
+* If you encounter problems with the `pycrypto` library, from the Terminal window type:
+   * `pip uninstall pycrypto`
+   * `pip install pycryptodome`
+   * and then reinstall the dependencies `pip install -r requirements.txt`. 
+   * If you still encounter problems with the pycrypto library, download directly the binary files from for 
 
 5) Working with the Google API 
-* Activate Google API
-* Get a client.json 
-* Get a key.json 
+* Activate Google API by following step by step the instructions of [this link](https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/), stop at the end of Part 1. 
+* Make sure to save your client ID and Service Account Credentials files in the same folder of the project cloned from GitHub, `Transparency_International_ETL_PipelineTransparency_International_ETL_Pipeline`. 
 
 6) Change the name of key.json in `constants.py`
-Now open the `constant.py` file, if you don't have any programme that reads `.py` extensions (like [`Sublime Text`](https://fileinfo.com/software/jon_skinner/sublime_text), you can also just use the good old [`Microsoft Notepad`](https://fileinfo.com/software/microsoft/notepad). 
+* Now open the `constant.py` file, if you don't have any programme that reads `.py` extensions (like [`Sublime Text`](https://fileinfo.com/software/jon_skinner/sublime_text), you can also just use the good old [`Microsoft Notepad`](https://fileinfo.com/software/microsoft/notepad). 
+* Change the content of the variable KEY, `KEY = "jupyter-meets-gsheet-f71096c7c7b8.json"` inserting in the double quotes the name you gave to your Service Account Credentials JSON file. 
+* Save and close `contstants.py`. 
 
-7) Run `app.py`
+7) From the Terminal run `Python app.py`
 
 
-## Reusability TODO
+## Reusability
 Now it's 2019 and you want to do a new iteration of this study. 
 
 ### How to change/add data
