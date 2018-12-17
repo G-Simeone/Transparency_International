@@ -165,7 +165,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 <details open>
 <summary> 1) Download Python, pip, virtualenv and virtualenvwrapper-win: </summary>
 <br>
-+ Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
+   +Go to the [`Python Releases for Windows`](https://www.python.org/downloads/windows/). 
 + CTRL+F `Python 3.6.5 - 2018-03-28`.
      "+" If you don't know if your Windows is a 32 or 64 bits:
      "+"  Open the Terminal Window by typing in the bottom-left bar "Terminal";
