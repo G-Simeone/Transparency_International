@@ -150,7 +150,7 @@ When clicking on one of the companies folder, then we would find 4 files:
 
 See below an example of three spidercharts that the pipeline would create.
 <p align="middle">
-  <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="230" />
+  <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="250" />
    <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="260" />
    <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="290" />
 </p>
