@@ -151,9 +151,9 @@ When clicking on one of the companies folder, then we would find 4 files:
 See below an example of three spidercharts that the pipeline would create.
 
 <p float="left">
-  <img src="//blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="100" />
-  <img src="//blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="100" /> 
-  <img src="/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="100" />
+  <img src="/https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="80" />
+  <img src="/https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="80" /> 
+  <img src="/https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="80" />
 </p>
 
 It's important to notice that there was an edge-case to be handled in the creation of the spiderchart, when a company had been attributed an "N/A" to a certain section (say, lobbying) because they openly said to refrain from any such activities. In this case we had to artificially attribute to every  `None` in Python a 0.01 and deactivating the label by adding NA, "Lobbying (NA)". 
