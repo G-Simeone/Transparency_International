@@ -233,14 +233,17 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
             <li>Activate Google API by following step by step the instructions of <a href="https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/">this link</a>, stop at the end of Part 1.</li> 
             <li>Make sure to save your client ID and Service Account Credentials files in the same folder of the project cloned from GitHub, "Transparency_International_ETL_PipelineTransparency_International_ETL_Pipeline".</li> 
 
-6) Change the name of key.json in `constants.py`
-            <li>Now open the "constant.py" file, if you don't have any programme that reads <code>.py</code> extensions (like <a href="https://fileinfo.com/software/jon_skinner/sublime_text">Sublime Text</a>), you can also just use the good old Microsoft Notepad.</li> 
+<details>
+   <summary>6) Change the name of key.json in <code>constants.py</code></summary> 
+      <br>
+         <ul>
+            <li>Now open the <code>constant.py</code> file, if you don't have any programme that reads <code>.py</code> extensions (like <a href="https://fileinfo.com/software/jon_skinner/sublime_text">Sublime Text</a>), you can also just use the good old Microsoft Notepad.</li> 
             <li>Change the content of the variable KEY, <code>KEY = "jupyter-meets-gsheet-f71096c7c7b8.json"</code> inserting in the double quotes the name you gave to your Service Account Credentials JSON file.</li> 
             <li>Save and close <code>contstants.py</code>.</li> 
         </ul>
 </details>
 <br>
-Once you have followed all instructions from 1 to 6, you can type from the Terminal `Python app.py`
+Once you have followed all instructions from 1 to 6, you can type from the Terminal <code>Python app.py</code>
 
 ## Reusability
 Now it's 2019 and you want to do a new iteration of this study. 
