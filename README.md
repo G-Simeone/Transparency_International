@@ -151,8 +151,8 @@ When clicking on one of the companies folder, then we would find 4 files:
 See below an example of three spidercharts that the pipeline would create.
 <p align="middle">
   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="250" />
-   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="260" />
-   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="290" />
+   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="270" />
+   <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="300" />
 </p>
 
 It's important to notice that there was an edge-case to be handled in the creation of the spiderchart, when a company had been attributed an "N/A" to a certain section (say, lobbying) because they openly said to refrain from any such activities. In this case we had to artificially attribute to every  `None` in Python a 0.01 and deactivating the label by adding NA, "Lobbying (NA)". 
@@ -203,7 +203,7 @@ Before downloading all needed dependencies, we will need you to download [Visual
 * From the command line type `virtualenv trac2018` *(trac2018 is the name I chose, you can give your environment any name you wish)*
 * Activate your environment by typing in the command line `.\trac2018\Scripts\activate` *(if you gave your virtual environment another name make sure you're changing the in between `.\whaevertyoucalledtheenvironment\Scripts\activate`.*
 * Install all necessary packages typing `pip install -r requirements.txt`. This might take few minutes.
-* Should you get any error related to the `pycrypto` library, follow (these wonderful instructions)[https://github.com/sfbahr/PyCrypto-Wheels].  
+* Should you get any error related to the `pycrypto` library, follow [these wonderful instructions](https://github.com/sfbahr/PyCrypto-Wheels).  
 
 5) Working with the Google API 
 * Activate Google API by following step by step the instructions of [this link](https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/), stop at the end of Part 1. 
