@@ -171,7 +171,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 <ul>
    <li> If you don't know if your Windows is a 32 or 64 bits:</li>
    <li> Open the Terminal Window by typing in the bottom-left bar "Terminal"; </li>
-   <li> Type in the terminal the following command: <kbd>echo %PROCESSOR_ARCHITECTURE%<kbd> and you will know if it is 32 or 64.</li>
+   <li> Type in the terminal the following command: <code>echo %PROCESSOR_ARCHITECTURE%</code> and you will know if it is 32 or 64.</li>
 </ul>
 <li> Click on the link "Windows x86-WHAT_BITS_YOU_HAVE executable installer"</li>
 <li> At the end of the download the installation window pops up: </li>
@@ -190,7 +190,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
    </ul>
 <li> Install virtualenvwrapper-win:</li>
     <ul>
-     <li> Always on the Terminal window type <kbd>pip install virtualenvwrapper-win<kbd></li>
+     <li> Always on the Terminal window type <kbd>pip install virtualenvwrapper-win</kbd></li>
     </ul>
 PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-forge/df2gspread"> Conda forge channel </a>, somehow downloads an old version of the <a href="https://github.com/maybelinot/df2gspread"> df2gspread </a>) library giving you errors at run time. 
 </details>
