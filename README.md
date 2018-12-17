@@ -186,7 +186,7 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 <li> Install VirtualEnv:</li>
     <ul>
      <li> Open the Terminal window;</li>
-     <li> Type <kbd>pip install virtualenv<kbd></li>
+     <li> Type <samp>pip install virtualenv<samp>.</li>
    </ul>
 <li> Install virtualenvwrapper-win:</li>
     <ul>
