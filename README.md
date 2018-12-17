@@ -157,7 +157,7 @@ See below an example of three spidercharts that the pipeline would create.
 
 It's important to notice that there was an edge-case to be handled in the creation of the spiderchart, when a company had been attributed an "N/A" to a certain section (say, lobbying) because they openly said to refrain from any such activities. In this case we had to artificially attribute to every  `None` in Python a 0.01 and deactivating the label by adding NA, "Lobbying (NA)". 
 
-Here you can download an example of a company profile in `.docx`. Why not directly pdf? Because the client might want to tweak the language. 
+Click <a href="https://github.com/gsime1/Transparency_International_ETL_Pipeline/raw/master/deliverables/company_profiles/Brembo/Brembo_analisi.docx">here</a> to download an example of a company profile in `.docx`. Why not directly pdf? Because the client might want to tweak the language. 
 
 ### Software set-up 
 
