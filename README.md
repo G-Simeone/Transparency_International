@@ -150,7 +150,7 @@ When clicking on one of the companies folder, then we would find 4 files:
 
 See below an example of three spidercharts that the pipeline would create.
 <p align="middle">
-  <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="250" />
+  <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="260" />
    <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Medie%20Globali_spiderchart.png" width="280" />
    <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_Meccanica_spiderchart.png" width="320" />
 </p>
@@ -195,14 +195,24 @@ The user of this pipeline will use Windows, so below the instructions on how to 
 PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-forge/df2gspread"> Conda forge channel </a>, somehow downloads an old version of the <a href="https://github.com/maybelinot/df2gspread"> df2gspread </a>) library giving you errors at run time. 
 </details>
 
-2) Download Git for Windows. 
-* Go to [`Git for Windows`](https://gitforwindows.org/) and Download it (keep clicking on "Next" without changing the options and boxes ticked for you). 
+<details>
+<summary> 2) Download Git for Windows. </summary>
+<br>
+<ul>
+   <li>Go to <a href="https://gitforwindows.org/"> Git for Windows</a> and Download it (keep clicking on "Next" without changing the options and boxes ticked for you).</li>
+</ul>
+</details> 
 
-3) Download this repository on your PC. 
-* From the Terminal window type `git clone https://github.com/gsime1/Transparency_International_ETL_Pipeline` 
-* From the Windows search box search "Transparency_International_ETL_Pipeline", right-click and select "copy path". 
-* From the Terminal window type `cd`, then right clck and paste the path to the "Transparency_International_ETL_Pipeline" folder on your computer. 
-* the prompter sign `>` of the command line should now contain `Transparency_International_ETL_Pipeline` which means you are inside the folder from the terminal (`cd` actually means, change directory, whereby we mean go to this folder whose path I gave you). 
+<details>
+<summary> 3) Download this repository on your PC. </summary>
+<br>
+<ul>
+   <li>From the Terminal window type <code>git clone https://github.com/gsime1/Transparency_International_ETL_Pipeline</code>.</li> 
+   <li>From the Windows search box search "Transparency_International_ETL_Pipeline", right-click and select "copy path".</li>
+   <li>From the Terminal window type <code>cd</code>, then right clck and paste.</li>
+   <li>the prompter sign <code> > </code> of the command line should now contain <code> Transparency_International_ETL_Pipeline </code> which means you are inside the folder from the terminal (<code> cd </code> actually means, change directory, whereby we mean go to this folder whose path I gave you).</li>
+</ul>
+</details>
 
 4) Create environment using virtualenv + `requirements.txt`
 Before downloading all needed dependencies, we will need you to download [Visual Studio 2015 Community Edition (or any later version, when these are released)](https://visualstudio.microsoft.com/de/downloads/?rr=https%3A%2F%2Fpackaging.python.org%2F). 
