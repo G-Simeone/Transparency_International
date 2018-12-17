@@ -177,7 +177,7 @@ The user of this pipeline will use Windows, so below the instructions on how to 
   <li> At the end of the download the installation window pops up: </li>
       <ul>
           <li> Tick the box "Add Python 3.6 to PATH"; (Adding Python to the PATH will allow you to call if from the Terminal.)</li>
-          <li> OPTIONAL: to be sure you could check the we added Python to the computer's PATH by following <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/"> these instructions </a>.</li>
+          <li> To be sure, although optional: you could check that we properly added Python to the computer's PATH by following <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/"> these instructions, otherwise continue to next point.</a></li>
           <li> Click on "Customize installation"; </li>
           <li> Make sure the box "Install pip" is ticked;</li>
           <li> Click "Next";</li>
@@ -186,7 +186,7 @@ The user of this pipeline will use Windows, so below the instructions on how to 
   <li> Install VirtualEnv:</li>
      <ul>
         <li> Open the Terminal window;</li>
-        <li> Type <samp>pip install virtualenv<samp>.</li>
+        <li> Type <code>pip install virtualenv</code>.</li>
     </ul>
   <li> Install virtualenvwrapper-win:</li>
      <ul>
