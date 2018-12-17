@@ -243,9 +243,8 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
             <li>Change the content of the variable KEY, <code>KEY = "jupyter-meets-gsheet-f71096c7c7b8.json"</code> inserting in the double quotes the name you gave to your Service Account Credentials JSON file.</li> 
             <li>Save and close <code>contstants.py</code>.</li> 
         </ul>
-   <br>
 </details>
-
+<br>
 Once you have followed all instructions from 1 to 6, you can type from the Terminal <code>Python app.py</code>
 
 ## Reusability
