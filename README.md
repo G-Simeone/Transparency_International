@@ -232,6 +232,8 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
          <ul>
             <li>Activate Google API by following step by step the instructions of <a href="https://socraticowl.com/post/integrate-google-sheets-and-jupyter-notebooks/">this link</a>, stop at the end of Part 1.</li> 
             <li>Make sure to save your client ID and Service Account Credentials files in the same folder of the project cloned from GitHub, "Transparency_International_ETL_PipelineTransparency_International_ETL_Pipeline".</li> 
+   </ul>
+</details>
 
 <details>
    <summary>6) Change the name of key.json in <code>constants.py</code></summary> 
