@@ -186,11 +186,11 @@ We assume that the client will use a Windows OS, so below the instructions on ho
 <li> Install VirtualEnv:</li>
     <ul>
      <li> Open the Terminal window;</li>
-     <li> Type <kbd>pip install virtualenv<kbd>.</li>
+     <li> Type <kbd>pip install virtualenv<kbd></li>
    </ul>
 <li> Install virtualenvwrapper-win:</li>
     <ul>
-     <li> Always on the Terminal window type <kbd>pip install virtualenvwrapper-win<kbd>.</li>
+     <li> Always on the Terminal window type <kbd>pip install virtualenvwrapper-win<kbd></li>
     </ul>
 PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-forge/df2gspread"> Conda forge channel </a>, somehow downloads an old version of the <a href="https://github.com/maybelinot/df2gspread"> df2gspread </a>) library giving you errors at run time. 
 </details>
