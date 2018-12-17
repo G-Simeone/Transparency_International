@@ -149,6 +149,9 @@ When clicking on one of the companies folder, then we would find 4 files:
 ```
 
 See below an example of three spidercharts that the pipeline would create.
+<p float="left">
+  <img src="https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="100" />
+</p>
 
 <p float="left">
   <img src="/https://github.com/gsime1/Transparency_International_ETL_Pipeline/blob/master/deliverables/company_profiles/Brembo/Brembo_spiderchart.png" width="80" />
