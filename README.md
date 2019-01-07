@@ -246,9 +246,3 @@ PS: We decided not to use Miniconda as the <a href="https://anaconda.org/conda-f
 </details>
 <br>
 Once you have followed all instructions from 1 to 6, you can type from the Terminal <code>Python app.py</code>
-
-## Reusability
-Now it's 2019 and you want to do a new iteration of this study. 
-
-### How to change/add data
-### How to replicate the study with new data
